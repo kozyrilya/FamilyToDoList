@@ -20,6 +20,7 @@
 		5E2DA46628686BB80055FA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DA46528686BB80055FA26 /* Assets.xcassets */; };
 		5E2DA46928686BB80055FA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DA46728686BB80055FA26 /* LaunchScreen.storyboard */; };
 		5E8DFA6E2886DFA4002F3304 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8DFA6D2886DFA4002F3304 /* CoreDataManager.swift */; };
+		5EA3E5B32924E67B00C546EE /* ManagersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */; };
 		5EB462BB290F15A100749E58 /* CommonLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB462BA290F15A100749E58 /* CommonLoginButton.swift */; };
 		5EB462BD290F1B8C00749E58 /* LocalizedCommonStringsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB462BC290F1B8C00749E58 /* LocalizedCommonStringsConstants.swift */; };
 		5ECACE222886EEC500A56B36 /* CommonUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECACE212886EEC500A56B36 /* CommonUITextField.swift */; };
@@ -47,6 +48,7 @@
 		5E2DA46828686BB80055FA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E2DA46A28686BB80055FA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E8DFA6D2886DFA4002F3304 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersFactory.swift; sourceTree = "<group>"; };
 		5EB462BA290F15A100749E58 /* CommonLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLoginButton.swift; sourceTree = "<group>"; };
 		5EB462BC290F1B8C00749E58 /* LocalizedCommonStringsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedCommonStringsConstants.swift; sourceTree = "<group>"; };
 		5ECACE212886EEC500A56B36 /* CommonUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUITextField.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				5E8DFA6D2886DFA4002F3304 /* CoreDataManager.swift */,
 				5E14A319291140DB00079961 /* ValidationManager.swift */,
+				5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				5E14A31A291140DC00079961 /* ValidationManager.swift in Sources */,
 				5EE592B12886C2E2000FC2CA /* LoginRouterProtocol.swift in Sources */,
 				5E0C5E662868B97F00F0D1F1 /* LoginRouter.swift in Sources */,
+				5EA3E5B32924E67B00C546EE /* ManagersFactory.swift in Sources */,
 				5E14A31329106C6B00079961 /* CommonLoginTypeView.swift in Sources */,
 				5ECACE222886EEC500A56B36 /* CommonUITextField.swift in Sources */,
 				5E0C5E622868B95A00F0D1F1 /* LoginPresenter.swift in Sources */,

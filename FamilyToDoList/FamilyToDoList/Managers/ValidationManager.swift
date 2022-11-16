@@ -7,84 +7,63 @@
 
 import Foundation
 
-class ValidationManager {
+protocol ValidationManagerType: ManagerType {
+    func validateEmail(with email: String?) -> CommonError?
+    func validatePassword(with password: String?) -> CommonError?
+}
 
-    enum TextFieldsTypes {
-        case email
-        case password
-    }
+enum TextFieldsTypes {
+    case email
+    case password
+}
 
-    enum EmailValidationErrors {
-        case atSymbol
-        case emptyEmail
+enum CommonError: Error {
+    case atSymbol
+    case emptyEmail
+    case minCharactersCount
+    case emptyPassword
+    case incorrectPassword
 
-        var description: String {
-            switch self {
-            case .atSymbol:
-                return errorTitle + CommonErrors.invalidEmailErrorText
-            case .emptyEmail:
-                return errorTitle + CommonErrors.emptyEmailErrorText
-            }
+    var description: String {
+        switch self {
+        case .atSymbol:
+            return CommonErrors.commonErrorText + CommonErrors.invalidEmailErrorText
+        case .emptyEmail:
+            return CommonErrors.commonErrorText + CommonErrors.emptyEmailErrorText
+        case .minCharactersCount:
+            return CommonErrors.commonErrorText + CommonErrors.invalidPasswordErrorText
+        case .emptyPassword:
+            return CommonErrors.commonErrorText + CommonErrors.emptyPasswordErrorText
+        case .incorrectPassword:
+            return CommonErrors.commonErrorText + CommonErrors.incorrectPasswordErrorText
         }
     }
+}
 
-    enum PasswordValidationErrors {
-        case minCharactersCount
-        case emptyPassword
-        case incorrectPassword
+class ValidationManager { }
 
-        var description: String {
-            switch self {
-            case .minCharactersCount:
-                return errorTitle + CommonErrors.invalidPasswordErrorText
-            case .emptyPassword:
-                return errorTitle + CommonErrors.emptyPasswordErrorText
-            case .incorrectPassword:
-                return errorTitle + CommonErrors.incorrectPasswordErrorText
-            }
+// MARK: ValidationManagerType
+extension ValidationManager: ValidationManagerType {
+
+    func validateEmail(with email: String?) -> CommonError? {
+        guard let email = email, email.trimmingCharacters(in: .whitespaces).count > 0 else {
+            return CommonError.emptyEmail
         }
-    }
 
-    static var shared: ValidationManager = ValidationManager()
-
-    private static var errorTitle: String = CommonErrors.commonErrorText
-
-    private init() { }
-
-    func checkIsEmpty(with text: String, fieldType: TextFieldsTypes) -> String? {
-        if text.isEmpty == true {
-            switch fieldType {
-            case .email:
-                return EmailValidationErrors.emptyEmail.description
-            case .password:
-                return PasswordValidationErrors.emptyPassword.description
-            }
+        if !email.contains("@") {
+            return CommonError.atSymbol
         }
 
         return nil
     }
 
-    func validateEmail(with email: String) -> String? {
-        let trimmedEmail = email.trimmingCharacters(in: .whitespaces)
-
-        if trimmedEmail.count == 0 {
-            return EmailValidationErrors.emptyEmail.description
-        }
-
-        if !trimmedEmail.contains("@") {
-            return EmailValidationErrors.atSymbol.description
-        }
-
-        return nil
-    }
-
-    func validatePassword(with password: String) -> String? {
-        if password.count == 0 {
-            return PasswordValidationErrors.emptyPassword.description
+    func validatePassword(with password: String?) -> CommonError? {
+        guard let password = password, password.count > 0 else {
+            return CommonError.emptyPassword
         }
 
         if password.count < 6 {
-            return PasswordValidationErrors.minCharactersCount.description
+            return CommonError.minCharactersCount
         }
 
         return nil

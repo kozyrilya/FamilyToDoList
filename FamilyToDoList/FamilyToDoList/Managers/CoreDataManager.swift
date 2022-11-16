@@ -8,7 +8,9 @@
 import Foundation
 import CoreData
 
-class CoreDataService {
+protocol CoreDataManagerType: ManagerType { }
+
+class CoreDataManager {
 
     init() {
         initalizeStack()
@@ -28,3 +30,6 @@ class CoreDataService {
         }
     }
 }
+
+// MARK: CoreDataManagerType
+extension CoreDataManager: CoreDataManagerType { }

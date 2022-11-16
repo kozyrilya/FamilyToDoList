@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol LoginViewType: ViewType {
-
-}
+protocol LoginViewType: ViewType { }
 
 protocol LoginViewOutput {
     func signIn(email: String?, password: String?)

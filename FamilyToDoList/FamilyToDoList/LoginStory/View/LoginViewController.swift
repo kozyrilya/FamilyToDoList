@@ -108,6 +108,7 @@ extension LoginViewController: LoginViewType { }
 
 // MARK: CommonLoginViewDelegate
 extension LoginViewController: CommonLoginTypeViewDelegate {
+    
     func changeLoginTypeButtonPressed(with state: CommonLoginTypeView.LoginState) {
         state == .signIn ? loginButton.reloadButton(buttonState: .signIn) : loginButton.reloadButton(buttonState: .signUp)
     }

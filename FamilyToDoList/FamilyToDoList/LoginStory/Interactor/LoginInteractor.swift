@@ -7,63 +7,41 @@
 
 import Foundation
 
-class LoginInteractor { }
+class LoginInteractor {
 
-// MARK: LoginInteractorType
-extension LoginInteractor: LoginInteractorType {
-    func signIn(email: String?, password: String?, completion: @escaping (Result<Bool, Error>) -> Void) {
-        
-    }
+    let validationManager: ValidationManagerType!
+    let coreDateManager:CoreDataManagerType!
 
-    func signUp(email: String?, password: String?, completion: @escaping (Result<Bool, Error>) -> Void) {
-        
+    init(with validationManager: ValidationManagerType, coreDataManager: CoreDataManagerType) {
+        self.validationManager = validationManager
+        self.coreDateManager = coreDataManager
     }
 }
 
-//class ConfirmationInteractor {
-//    let storageService: StorageServiceType!
-//    let notificationService: NotificationService!
-//    let userData: UserInfo!
-//
-//
-//    init(with storageService: StorageServiceType, with notificationService: NotificationService, and info: UserInfo) {
-//        self.storageService = storageService
-//        self.notificationService = notificationService
-//        userData = info
-//    }
-//
-//    private func onUserInfoSaved(completion: @escaping Block.Empty) {
-//        notificationService.scheduleNotification(on: notificationDate(stringDate: userInfo.notificationDate), for: userData)
-////        notificationService.scheduleNotification(on: inTwoMinutesDate(), for: userData)
-//        completion()
-//    }
-//
-//    func inTwoMinutesDate() -> Date {
-//        let notificationDate = Date().addingTimeInterval(10)
-//        return notificationDate
-//    }
-//
-//    private func notificationDate(stringDate: String) -> Date {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "MM/dd/yyyy"
-//        dateFormatter.timeZone = TimeZone(identifier: "GMT")
-//       let date = dateFormatter.date(from: stringDate)
-//    return date!
-//
-//    }
-//}
-//
-//extension ConfirmationInteractor: ConfirmationInteractorType {
-//    var userInfo: UserInfo {
-//        return userData
-//    }
-//
-//    func saveUserInfoToStorage(completion: @escaping Block.Empty) {
-//
-//        self.storageService.saveUserInfo(userData: userData, completion: {
-//            self.onUserInfoSaved(completion: {
-//                completion()
-//            })
-//        })
-//    }
-//}
+// MARK: LoginInteractorType
+extension LoginInteractor: LoginInteractorType {
+    
+    func signIn(email: String?, password: String?, completion: @escaping (Result<User, CommonError>) -> Void) {
+        let emailValidationError = validationManager.validateEmail(with: email)
+        if let emailValidationError = emailValidationError {
+            completion(.failure(emailValidationError))
+        }
+
+        let passwordValidationError = validationManager.validatePassword(with: password)
+        if let passwordValidationError = passwordValidationError {
+            completion(.failure(passwordValidationError))
+        }
+    }
+
+    func signUp(email: String?, password: String?, completion: @escaping (Result<User, CommonError>) -> Void) {
+        let emailValidationError = validationManager.validateEmail(with: email)
+        if let emailValidationError = emailValidationError {
+            completion(.failure(emailValidationError))
+        }
+
+        let passwordValidationError = validationManager.validatePassword(with: password)
+        if let passwordValidationError = passwordValidationError {
+            completion(.failure(passwordValidationError))
+        }
+    }
+}

@@ -7,11 +7,7 @@
 
 import Foundation
 
-enum Block {
-    typealias Empty = () -> Void
-}
-
 protocol LoginInteractorType {
-    func signIn(email: String?, password: String?, completion: @escaping (Result<Bool, Error>) -> Void)
-    func signUp(email: String?, password: String?, completion: @escaping (Result<Bool, Error>) -> Void)
+    func signIn(email: String?, password: String?, completion: @escaping (Result<User, CommonError>) -> Void)
+    func signUp(email: String?, password: String?, completion: @escaping (Result<User, CommonError>) -> Void)
 }

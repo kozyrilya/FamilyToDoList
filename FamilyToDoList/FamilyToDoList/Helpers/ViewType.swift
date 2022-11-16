@@ -8,7 +8,6 @@
 import UIKit
 
 protocol ViewType: AnyObject {
-
     var viewController: UIViewController { get }
 }
 
@@ -20,9 +19,10 @@ extension ViewType where Self: UIViewController {
 }
 
 extension ViewType {
-    func showError(_ error: Error) {
+
+    func showError(_ error: CommonError) {
         let alertController = UIAlertController(title: "Error",
-                                                message: error.localizedDescription,
+                                                message: error.description,
                                                 preferredStyle: .alert)
 
         alertController.addAction(UIAlertAction(title: "OK",

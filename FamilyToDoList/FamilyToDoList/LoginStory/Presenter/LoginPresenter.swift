@@ -14,9 +14,9 @@ class LoginPresenter {
     var router: LoginRouterType!
 }
 
-
 // MARK: LoginViewOutput
 extension LoginPresenter: LoginViewOutput {
+    
     func signIn(email: String?, password: String?) {
         interactor?.signIn(email: email, password: password, completion: { result in
             switch result {
