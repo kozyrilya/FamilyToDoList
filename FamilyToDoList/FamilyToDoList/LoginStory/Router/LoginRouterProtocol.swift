@@ -7,4 +7,6 @@
 
 import Foundation
 
-protocol LoginRouterType { }
+protocol LoginRouterType {
+    func showListVC(with userData: User)
+}

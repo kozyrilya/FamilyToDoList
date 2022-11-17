@@ -21,6 +21,25 @@
 		5E2DA46928686BB80055FA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DA46728686BB80055FA26 /* LaunchScreen.storyboard */; };
 		5E8DFA6E2886DFA4002F3304 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8DFA6D2886DFA4002F3304 /* CoreDataManager.swift */; };
 		5EA3E5B32924E67B00C546EE /* ManagersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */; };
+		5EA3E5B62925127400C546EE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5B52925127400C546EE /* ListViewController.swift */; };
+		5EA3E5B82925128400C546EE /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5B72925128400C546EE /* ListViewProtocol.swift */; };
+		5EA3E5BC292512E400C546EE /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5BB292512E400C546EE /* ListInteractor.swift */; };
+		5EA3E5BE292512EF00C546EE /* ListInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5BD292512EF00C546EE /* ListInteractorProtocol.swift */; };
+		5EA3E5C12925135700C546EE /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5C02925135700C546EE /* ListPresenter.swift */; };
+		5EA3E5C4292513E100C546EE /* ListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5C3292513E100C546EE /* ListRouterProtocol.swift */; };
+		5EA3E5C6292513F900C546EE /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5C5292513F900C546EE /* ListRouter.swift */; };
+		5EA3E5C92925146000C546EE /* ListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5C82925146000C546EE /* ListInitializer.swift */; };
+		5EA3E5CC29252DB000C546EE /* ListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5CB29252DB000C546EE /* ListDataSource.swift */; };
+		5EA3E5CE2926415900C546EE /* ListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EA3E5CD2926415800C546EE /* ListStoryboard.storyboard */; };
+		5EA3E5D0292645B000C546EE /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5CF292645B000C546EE /* UIViewController+Extension.swift */; };
+		5EA3E5D82926520400C546EE /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5D72926520400C546EE /* AddNoteViewController.swift */; };
+		5EA3E5DA2926524300C546EE /* AddNoteViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5D92926524300C546EE /* AddNoteViewProtocol.swift */; };
+		5EA3E5DC292652BC00C546EE /* AddNotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5DB292652BC00C546EE /* AddNotePresenter.swift */; };
+		5EA3E5DE292652F700C546EE /* AddNoteInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5DD292652F700C546EE /* AddNoteInteractorProtocol.swift */; };
+		5EA3E5E02926530300C546EE /* AddNoteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5DF2926530300C546EE /* AddNoteInteractor.swift */; };
+		5EA3E5E22926539300C546EE /* AddNoteRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5E12926539300C546EE /* AddNoteRouterProtocol.swift */; };
+		5EA3E5E4292653A200C546EE /* AddNoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5E3292653A200C546EE /* AddNoteRouter.swift */; };
+		5EA3E5E62926544300C546EE /* AddNoteInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5E52926544300C546EE /* AddNoteInitializer.swift */; };
 		5EB462BB290F15A100749E58 /* CommonLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB462BA290F15A100749E58 /* CommonLoginButton.swift */; };
 		5EB462BD290F1B8C00749E58 /* LocalizedCommonStringsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB462BC290F1B8C00749E58 /* LocalizedCommonStringsConstants.swift */; };
 		5ECACE222886EEC500A56B36 /* CommonUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECACE212886EEC500A56B36 /* CommonUITextField.swift */; };
@@ -49,6 +68,25 @@
 		5E2DA46A28686BB80055FA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E8DFA6D2886DFA4002F3304 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersFactory.swift; sourceTree = "<group>"; };
+		5EA3E5B52925127400C546EE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		5EA3E5B72925128400C546EE /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
+		5EA3E5BB292512E400C546EE /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		5EA3E5BD292512EF00C546EE /* ListInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorProtocol.swift; sourceTree = "<group>"; };
+		5EA3E5C02925135700C546EE /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		5EA3E5C3292513E100C546EE /* ListRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterProtocol.swift; sourceTree = "<group>"; };
+		5EA3E5C5292513F900C546EE /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		5EA3E5C82925146000C546EE /* ListInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInitializer.swift; sourceTree = "<group>"; };
+		5EA3E5CB29252DB000C546EE /* ListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataSource.swift; sourceTree = "<group>"; };
+		5EA3E5CD2926415800C546EE /* ListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListStoryboard.storyboard; sourceTree = "<group>"; };
+		5EA3E5CF292645B000C546EE /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		5EA3E5D72926520400C546EE /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		5EA3E5D92926524300C546EE /* AddNoteViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewProtocol.swift; sourceTree = "<group>"; };
+		5EA3E5DB292652BC00C546EE /* AddNotePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotePresenter.swift; sourceTree = "<group>"; };
+		5EA3E5DD292652F700C546EE /* AddNoteInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteInteractorProtocol.swift; sourceTree = "<group>"; };
+		5EA3E5DF2926530300C546EE /* AddNoteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteInteractor.swift; sourceTree = "<group>"; };
+		5EA3E5E12926539300C546EE /* AddNoteRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteRouterProtocol.swift; sourceTree = "<group>"; };
+		5EA3E5E3292653A200C546EE /* AddNoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteRouter.swift; sourceTree = "<group>"; };
+		5EA3E5E52926544300C546EE /* AddNoteInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteInitializer.swift; sourceTree = "<group>"; };
 		5EB462BA290F15A100749E58 /* CommonLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonLoginButton.swift; sourceTree = "<group>"; };
 		5EB462BC290F1B8C00749E58 /* LocalizedCommonStringsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedCommonStringsConstants.swift; sourceTree = "<group>"; };
 		5ECACE212886EEC500A56B36 /* CommonUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUITextField.swift; sourceTree = "<group>"; };
@@ -100,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				5E14A317291070FC00079961 /* UIView+Extension.swift */,
+				5EA3E5CF292645B000C546EE /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -126,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				5E0C5E5C2868B91000F0D1F1 /* LoginStory */,
+				5EA3E5B42925125400C546EE /* ListStory */,
+				5EA3E5D12926519900C546EE /* AddNoteStory */,
 				5E2DA45C28686BB60055FA26 /* AppDelegate.swift */,
 				5E2DA46528686BB80055FA26 /* Assets.xcassets */,
 				5E2DA46728686BB80055FA26 /* LaunchScreen.storyboard */,
@@ -146,6 +187,118 @@
 				5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		5EA3E5B42925125400C546EE /* ListStory */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5BA292512CF00C546EE /* View */,
+				5EA3E5B9292512C600C546EE /* Interactor */,
+				5EA3E5BF2925134000C546EE /* Presenter */,
+				5EA3E5C2292513C000C546EE /* Router */,
+				5EA3E5C72925143E00C546EE /* Initializer */,
+			);
+			path = ListStory;
+			sourceTree = "<group>";
+		};
+		5EA3E5B9292512C600C546EE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5BB292512E400C546EE /* ListInteractor.swift */,
+				5EA3E5BD292512EF00C546EE /* ListInteractorProtocol.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5EA3E5BA292512CF00C546EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5B52925127400C546EE /* ListViewController.swift */,
+				5EA3E5CD2926415800C546EE /* ListStoryboard.storyboard */,
+				5EA3E5B72925128400C546EE /* ListViewProtocol.swift */,
+				5EA3E5CB29252DB000C546EE /* ListDataSource.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EA3E5BF2925134000C546EE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5C02925135700C546EE /* ListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5EA3E5C2292513C000C546EE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5C5292513F900C546EE /* ListRouter.swift */,
+				5EA3E5C3292513E100C546EE /* ListRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5EA3E5C72925143E00C546EE /* Initializer */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5C82925146000C546EE /* ListInitializer.swift */,
+			);
+			path = Initializer;
+			sourceTree = "<group>";
+		};
+		5EA3E5D12926519900C546EE /* AddNoteStory */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5D2292651BA00C546EE /* View */,
+				5EA3E5D6292651E900C546EE /* Interactor */,
+				5EA3E5D5292651DC00C546EE /* Presenter */,
+				5EA3E5D4292651D400C546EE /* Router */,
+				5EA3E5D3292651C200C546EE /* Initializer */,
+			);
+			path = AddNoteStory;
+			sourceTree = "<group>";
+		};
+		5EA3E5D2292651BA00C546EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5D72926520400C546EE /* AddNoteViewController.swift */,
+				5EA3E5D92926524300C546EE /* AddNoteViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EA3E5D3292651C200C546EE /* Initializer */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5E52926544300C546EE /* AddNoteInitializer.swift */,
+			);
+			path = Initializer;
+			sourceTree = "<group>";
+		};
+		5EA3E5D4292651D400C546EE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5E3292653A200C546EE /* AddNoteRouter.swift */,
+				5EA3E5E12926539300C546EE /* AddNoteRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		5EA3E5D5292651DC00C546EE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5DB292652BC00C546EE /* AddNotePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5EA3E5D6292651E900C546EE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5EA3E5DF2926530300C546EE /* AddNoteInteractor.swift */,
+				5EA3E5DD292652F700C546EE /* AddNoteInteractorProtocol.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		5EB462B8290F152B00749E58 /* CommonLoginTextField */ = {
@@ -328,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E2DA46928686BB80055FA26 /* LaunchScreen.storyboard in Resources */,
+				5EA3E5CE2926415900C546EE /* ListStoryboard.storyboard in Resources */,
 				5E2DA46628686BB80055FA26 /* Assets.xcassets in Resources */,
 				5E14A31529106C7B00079961 /* CommonLoginTypeView.xib in Resources */,
 			);
@@ -383,21 +537,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE592AF2886C229000FC2CA /* LoginInteractorProtocol.swift in Sources */,
+				5EA3E5B82925128400C546EE /* ListViewProtocol.swift in Sources */,
 				5E0C5E602868B94F00F0D1F1 /* LoginInteractor.swift in Sources */,
+				5EA3E5BE292512EF00C546EE /* ListInteractorProtocol.swift in Sources */,
+				5EA3E5D0292645B000C546EE /* UIViewController+Extension.swift in Sources */,
 				5E0C5E5E2868B93D00F0D1F1 /* LoginViewProtocol.swift in Sources */,
 				5E0C5E642868B96A00F0D1F1 /* LoginEntity.swift in Sources */,
+				5EA3E5CC29252DB000C546EE /* ListDataSource.swift in Sources */,
+				5EA3E5DC292652BC00C546EE /* AddNotePresenter.swift in Sources */,
+				5EA3E5E22926539300C546EE /* AddNoteRouterProtocol.swift in Sources */,
+				5EA3E5D82926520400C546EE /* AddNoteViewController.swift in Sources */,
+				5EA3E5B62925127400C546EE /* ListViewController.swift in Sources */,
 				5EE592AA2886BCE6000FC2CA /* LoginViewController.swift in Sources */,
 				5EB462BD290F1B8C00749E58 /* LocalizedCommonStringsConstants.swift in Sources */,
+				5EA3E5BC292512E400C546EE /* ListInteractor.swift in Sources */,
+				5EA3E5C6292513F900C546EE /* ListRouter.swift in Sources */,
+				5EA3E5C92925146000C546EE /* ListInitializer.swift in Sources */,
+				5EA3E5C12925135700C546EE /* ListPresenter.swift in Sources */,
 				5EE592B32886C3D9000FC2CA /* LoginInitializer.swift in Sources */,
 				5E14A318291070FC00079961 /* UIView+Extension.swift in Sources */,
 				5EB462BB290F15A100749E58 /* CommonLoginButton.swift in Sources */,
+				5EA3E5E02926530300C546EE /* AddNoteInteractor.swift in Sources */,
 				5E8DFA6E2886DFA4002F3304 /* CoreDataManager.swift in Sources */,
 				5E2DA45D28686BB60055FA26 /* AppDelegate.swift in Sources */,
 				5EE592AD2886BD42000FC2CA /* ViewType.swift in Sources */,
 				5E14A31A291140DC00079961 /* ValidationManager.swift in Sources */,
 				5EE592B12886C2E2000FC2CA /* LoginRouterProtocol.swift in Sources */,
+				5EA3E5DA2926524300C546EE /* AddNoteViewProtocol.swift in Sources */,
 				5E0C5E662868B97F00F0D1F1 /* LoginRouter.swift in Sources */,
 				5EA3E5B32924E67B00C546EE /* ManagersFactory.swift in Sources */,
+				5EA3E5E4292653A200C546EE /* AddNoteRouter.swift in Sources */,
+				5EA3E5DE292652F700C546EE /* AddNoteInteractorProtocol.swift in Sources */,
+				5EA3E5C4292513E100C546EE /* ListRouterProtocol.swift in Sources */,
+				5EA3E5E62926544300C546EE /* AddNoteInitializer.swift in Sources */,
 				5E14A31329106C6B00079961 /* CommonLoginTypeView.swift in Sources */,
 				5ECACE222886EEC500A56B36 /* CommonUITextField.swift in Sources */,
 				5E0C5E622868B95A00F0D1F1 /* LoginPresenter.swift in Sources */,

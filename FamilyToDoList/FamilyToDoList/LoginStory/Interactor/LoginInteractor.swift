@@ -31,6 +31,8 @@ extension LoginInteractor: LoginInteractorType {
         if let passwordValidationError = passwordValidationError {
             completion(.failure(passwordValidationError))
         }
+
+        completion(.success(User(name: "User", password: "SignIn")))
     }
 
     func signUp(email: String?, password: String?, completion: @escaping (Result<User, CommonError>) -> Void) {
@@ -43,5 +45,7 @@ extension LoginInteractor: LoginInteractorType {
         if let passwordValidationError = passwordValidationError {
             completion(.failure(passwordValidationError))
         }
+
+        completion(.success(User(name: "User", password: "SignUp")))
     }
 }

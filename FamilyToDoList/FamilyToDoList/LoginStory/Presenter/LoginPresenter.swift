@@ -20,8 +20,8 @@ extension LoginPresenter: LoginViewOutput {
     func signIn(email: String?, password: String?) {
         interactor?.signIn(email: email, password: password, completion: { result in
             switch result {
-            case .success:
-                print("Signed In")
+            case .success(let userData):
+                self.router.showListVC(with: userData)
             case .failure(let error):
                 self.view?.showError(error)
             }
@@ -31,8 +31,8 @@ extension LoginPresenter: LoginViewOutput {
     func signUp(email: String?, password: String?) {
         interactor?.signUp(email: email, password: password, completion: { result in
             switch result {
-            case .success:
-                print("Signed Up")
+            case .success(let userData):
+                self.router.showListVC(with: userData)
             case .failure(let error):
                 self.view?.showError(error)
             }
