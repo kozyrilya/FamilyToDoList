@@ -16,9 +16,9 @@ class CommonLoginButton: UIButton {
         var title: String {
             switch self {
             case .signIn:
-                return CommonConstants.signInButtonText
+                return LoginLocalizedStrings.Button.signInButtonText
             case .signUp:
-                return CommonConstants.signUpButtonText
+                return LoginLocalizedStrings.Button.signUpButtonText
             }
         }
     }

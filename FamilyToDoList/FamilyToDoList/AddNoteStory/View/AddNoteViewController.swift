@@ -11,22 +11,49 @@ final class AddNoteViewController: UIViewController {
 
     var presenter: AddNoteViewOutput?
 
-    private var noteTextField: UITextField = {
-        let textField = UITextField()
-        textField.backgroundColor = .blue
-        return textField
+    private var centerStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 20
+
+        return stackView
+    }()
+
+    private var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 20)
+        label.text = AddNoteLocalizedStrings.Label.addNoteDescriptionLabelText
+        label.textAlignment = .center
+
+        return label
+    }()
+
+    private var noteTextView: UITextView = {
+        let textView = UITextView()
+        textView.font = .systemFont(ofSize: 18)
+        textView.layer.borderColor = UIColor.black.cgColor
+        textView.layer.borderWidth = 1
+
+        return textView
     }()
 
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setupNoteTextFieldConstraints()
+        setupLayout()
     }
 
     // MARK: UI Methods
     private func setupUI() {
         setupNavigationBar()
+        self.view.backgroundColor = .systemBackground
+    }
+
+    private func setupLayout() {
+        setupCenterStackViewConstraints()
+        centerStackView.addArrangedSubview(titleLabel)
+        centerStackView.addArrangedSubview(noteTextView)
     }
 
     private func setupNavigationBar() {
@@ -38,14 +65,14 @@ final class AddNoteViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = cancelBarButtonItem
     }
 
-    private func setupNoteTextFieldConstraints() {
-        self.view.addSubview(noteTextField)
-        noteTextField.translatesAutoresizingMaskIntoConstraints = false
+    private func setupCenterStackViewConstraints() {
+        self.view.addSubview(centerStackView)
+        centerStackView.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
-        noteTextField.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-        noteTextField.heightAnchor.constraint(equalToConstant: 50),
-        noteTextField.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor),
-        noteTextField.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor)]
+            centerStackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
+            centerStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            centerStackView.heightAnchor.constraint(equalToConstant: 200),
+            centerStackView.widthAnchor.constraint(equalToConstant: self.view.frame.width - 40)]
         NSLayoutConstraint.activate(constraints)
     }
 

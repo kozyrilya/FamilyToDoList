@@ -16,9 +16,9 @@ class CommonUITextField: UITextField {
         var title: String {
             switch self {
             case .login:
-                return CommonConstants.loginTextFieldPlaceholder
+                return LoginLocalizedStrings.TextField.loginTextFieldPlaceholder
             case .password:
-                return CommonConstants.passwordTextFieldPlaceholder
+                return LoginLocalizedStrings.TextField.passwordTextFieldPlaceholder
             }
         }
     }

@@ -20,18 +20,18 @@ class CommonLoginTypeView: UIView {
         var descriptionLabelTitle: String {
             switch self {
             case .signIn:
-                return CommonConstants.loginViewSignInDescriptionLabelText
+                return LoginLocalizedStrings.Label.loginViewSignInDescriptionLabelText
             case .signUp:
-                return CommonConstants.loginViewSignUpDescriptionLabelText
+                return LoginLocalizedStrings.Label.loginViewSignUpDescriptionLabelText
             }
         }
 
         var loginButtonTitle: String {
             switch self {
             case .signIn:
-                return CommonConstants.signInButtonText
+                return LoginLocalizedStrings.Button.signInButtonText
             case .signUp:
-                return CommonConstants.signUpButtonText
+                return LoginLocalizedStrings.Button.signUpButtonText
             }
         }
     }
