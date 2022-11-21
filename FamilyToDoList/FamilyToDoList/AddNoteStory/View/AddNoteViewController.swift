@@ -21,7 +21,7 @@ final class AddNoteViewController: UIViewController {
 
     private var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 18)
         label.text = AddNoteLocalizedStrings.Label.addNoteDescriptionLabelText
         label.textAlignment = .center
 
@@ -30,7 +30,7 @@ final class AddNoteViewController: UIViewController {
 
     private var noteTextView: UITextView = {
         let textView = UITextView()
-        textView.font = .systemFont(ofSize: 18)
+        textView.font = .systemFont(ofSize: 16)
         textView.layer.borderColor = UIColor.black.cgColor
         textView.layer.borderWidth = 1
 
@@ -71,7 +71,7 @@ final class AddNoteViewController: UIViewController {
         let constraints = [
             centerStackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
             centerStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            centerStackView.heightAnchor.constraint(equalToConstant: 200),
+            centerStackView.heightAnchor.constraint(equalToConstant: 120),
             centerStackView.widthAnchor.constraint(equalToConstant: self.view.frame.width - 40)]
         NSLayoutConstraint.activate(constraints)
     }

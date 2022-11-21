@@ -38,6 +38,7 @@ class CommonLoginButton: UIButton {
     private func setupUI() {
         self.backgroundColor = .black
         self.setTitle(buttonState.title, for: .normal)
+        self.titleLabel?.font = .systemFont(ofSize: 18)
     }
 
     func reloadButton(buttonState: ButtonState) {

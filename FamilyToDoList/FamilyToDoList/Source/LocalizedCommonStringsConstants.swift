@@ -63,6 +63,23 @@ enum AddNoteLocalizedStrings {
     }
 }
 
+enum TableViewHeadersLocalizedStrings {
+
+    enum Label {
+        static let notesLabelTitle = NSLocalizedString(
+            "notesLabelTitle",
+            value: "Notes",
+            comment: "Title for note header"
+        )
+
+        static let doneNoteLabelTitle = NSLocalizedString(
+            "doneNoteLabelTitle",
+            value: "Done",
+            comment: "Title for done note header"
+        )
+    }
+}
+
 enum CommonErrors {
     static let commonErrorText = NSLocalizedString(
         "commonErrorText",

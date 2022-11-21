@@ -21,11 +21,15 @@ final class LoginViewController: UIViewController {
 
     private lazy var loginTextField: CommonUITextField = {
         let textField = CommonUITextField(type: .login)
+        #warning("Remove this in future")
+        textField.text = "email@gmail.com"
         return textField
     }()
 
     private lazy var passwordTextField: CommonUITextField = {
         let textField = CommonUITextField(type: .password)
+        #warning("Remove this in future")
+        textField.text = "nikomyneskazhu"
         return textField
     }()
 

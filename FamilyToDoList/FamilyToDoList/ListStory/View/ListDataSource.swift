@@ -23,14 +23,8 @@ final class ListDataSource: NSObject {
 
     func bind(tableView: UITableView) {
         self.tableView = tableView
-
-//        UITableViewCell.registerClass(for: tableView)
-//        [StarMoneyTierAndCardCell.self,
-//         StarMoneyTotalCardsCountCell.self,
-//         StarMoneyTotalCardsMoneyCell.self,
-//         StarMoneyCardCell.self,
-//         StarMoneyTotalNoCardsCell.self
-//        ].forEach { $0.registerNib(for: tableView) }
+        NoteTableViewCell.registerNib(for: tableView, nibName: "NoteTableViewCell", reuseIdentifier: "NoteTableViewCell")
+        DoneTableViewCell.registerNib(for: tableView, nibName: "DoneTableViewCell", reuseIdentifier: "DoneTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -46,64 +40,62 @@ extension ListDataSource: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
 //        guard let model = model else { return 0 }
-//        guard let section = Sections(rawValue: section) else {
-//            fatalError(Constants.dataInconsistencyError)
-//        }
-//        switch section {
-//        case .cards:
-//            return model.cards.count
-//        default:
-//            return 1
-//        }
+        guard let section = Sections(rawValue: section) else {
+            fatalError(Constants.dataInconsistencyError)
+        }
+
+        switch section {
+        case .inProgress:
+            return 5
+        case .done:
+            return 2
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
 //        guard let model = model else { return UITableViewCell() }
-//        guard let section = Sections(rawValue: indexPath.section) else {
-//            fatalError(Constants.dataInconsistencyError)
-//        }
-//
-//        switch section {
-//        case .tierAndCard:
-//            let cell: StarMoneyTierAndCardCell = .dequeue(from: tableView, for: indexPath)
-//            cell.update(model: model.tierAndCard)
-//            return cell
-//        case .totalCardsCount:
-//            let cell: StarMoneyTotalCardsCountCell = .dequeue(from: tableView, for: indexPath)
-//            cell.update(text: model.totalCardsCountCaption)
-//            return cell
-//        case .totalCardsMoney:
-//            let cell: StarMoneyTotalCardsMoneyCell = .dequeue(from: tableView, for: indexPath)
-//            cell.update(model: model.totalCardsMoney, rewardsAvailable: !model.cards.isEmpty)
-//            return cell
-//        case .cards:
-//            let cell: StarMoneyCardCell = .dequeue(from: tableView, for: indexPath)
-//            cell.update(model: model.cards[indexPath.row])
-//            return cell
-//        case .totalNoCards:
-//            let cell: StarMoneyTotalNoCardsCell = .dequeue(from: tableView, for: indexPath)
-//            cell.update(text: model.starRewardsBottomButtonText)
-//            cell.selectionStyle = .none
-//            cell.accessoryType = .disclosureIndicator
-//            return cell
-//        }
+        guard let section = Sections(rawValue: indexPath.section) else {
+            fatalError(Constants.dataInconsistencyError)
+        }
+
+        switch section {
+        case .inProgress:
+            let cell: NoteTableViewCell = .dequeue(from: tableView, for: indexPath, with: "NoteTableViewCell")
+            cell.configure(with: "Note number \(indexPath.row)")
+            return cell
+        case .done:
+            let cell: DoneTableViewCell = .dequeue(from: tableView, for: indexPath, with: "DoneTableViewCell")
+            cell.configure(with: "Done note number \(indexPath.row)")
+            return cell
+        }
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let section = Sections(rawValue: section) else {
+            fatalError(Constants.dataInconsistencyError)
+        }
+
+        switch section {
+        case .inProgress:
+            let view = UITableViewHeaderFooterView()
+            view.textLabel?.text = TableViewHeadersLocalizedStrings.Label.notesLabelTitle
+            return view
+        case .done:
+            let view = UITableViewHeaderFooterView()
+            view.textLabel?.text = TableViewHeadersLocalizedStrings.Label.doneNoteLabelTitle
+            return view
+        }
     }
 }
 
 extension ListDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let section = Sections(rawValue: section) else {
-            fatalError(Constants.dataInconsistencyError)
-        }
-        switch section {
-        case .inProgress:
-            return 20
-        default:
-            return 0
-        }
+        return 50
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

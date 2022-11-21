@@ -40,8 +40,8 @@ class CommonLoginTypeView: UIView {
 
     private var loginState: LoginState = .signUp
 
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var changeLoginTypeButton: UIButton!
+    @IBOutlet private var descriptionLabel: UILabel!
+    @IBOutlet private var changeLoginTypeButton: UIButton!
 
     override class func awakeFromNib() {
         super.awakeFromNib()

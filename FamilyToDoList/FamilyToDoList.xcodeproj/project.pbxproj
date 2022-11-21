@@ -20,6 +20,11 @@
 		5E2DA46628686BB80055FA26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DA46528686BB80055FA26 /* Assets.xcassets */; };
 		5E2DA46928686BB80055FA26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DA46728686BB80055FA26 /* LaunchScreen.storyboard */; };
 		5E8DFA6E2886DFA4002F3304 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8DFA6D2886DFA4002F3304 /* CoreDataManager.swift */; };
+		5EA122E1292BCF5500AADFB6 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA122DF292BCF5500AADFB6 /* NoteTableViewCell.swift */; };
+		5EA122E2292BCF5500AADFB6 /* NoteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA122E0292BCF5500AADFB6 /* NoteTableViewCell.xib */; };
+		5EA122E4292BD20A00AADFB6 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA122E3292BD20A00AADFB6 /* UITableViewCell+Extensions.swift */; };
+		5EA122E8292C11BC00AADFB6 /* DoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA122E6292C11BC00AADFB6 /* DoneTableViewCell.swift */; };
+		5EA122E9292C11BC00AADFB6 /* DoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EA122E7292C11BC00AADFB6 /* DoneTableViewCell.xib */; };
 		5EA3E5B32924E67B00C546EE /* ManagersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */; };
 		5EA3E5B62925127400C546EE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5B52925127400C546EE /* ListViewController.swift */; };
 		5EA3E5B82925128400C546EE /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA3E5B72925128400C546EE /* ListViewProtocol.swift */; };
@@ -67,6 +72,11 @@
 		5E2DA46828686BB80055FA26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E2DA46A28686BB80055FA26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E8DFA6D2886DFA4002F3304 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5EA122DF292BCF5500AADFB6 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		5EA122E0292BCF5500AADFB6 /* NoteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableViewCell.xib; sourceTree = "<group>"; };
+		5EA122E3292BD20A00AADFB6 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		5EA122E6292C11BC00AADFB6 /* DoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTableViewCell.swift; sourceTree = "<group>"; };
+		5EA122E7292C11BC00AADFB6 /* DoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoneTableViewCell.xib; sourceTree = "<group>"; };
 		5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagersFactory.swift; sourceTree = "<group>"; };
 		5EA3E5B52925127400C546EE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		5EA3E5B72925128400C546EE /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
@@ -139,6 +149,7 @@
 			children = (
 				5E14A317291070FC00079961 /* UIView+Extension.swift */,
 				5EA3E5CF292645B000C546EE /* UIViewController+Extension.swift */,
+				5EA122E3292BD20A00AADFB6 /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -187,6 +198,24 @@
 				5EA3E5B22924E67B00C546EE /* ManagersFactory.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		5EA122DE292BCF1A00AADFB6 /* NoteTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EA122DF292BCF5500AADFB6 /* NoteTableViewCell.swift */,
+				5EA122E0292BCF5500AADFB6 /* NoteTableViewCell.xib */,
+			);
+			path = NoteTableViewCell;
+			sourceTree = "<group>";
+		};
+		5EA122E5292C11A200AADFB6 /* DoneTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5EA122E6292C11BC00AADFB6 /* DoneTableViewCell.swift */,
+				5EA122E7292C11BC00AADFB6 /* DoneTableViewCell.xib */,
+			);
+			path = DoneTableViewCell;
 			sourceTree = "<group>";
 		};
 		5EA3E5B42925125400C546EE /* ListStory */ = {
@@ -330,6 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				5ECACE202886EE9A00A56B36 /* Common */,
+				5EA122E5292C11A200AADFB6 /* DoneTableViewCell */,
+				5EA122DE292BCF1A00AADFB6 /* NoteTableViewCell */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -483,7 +514,9 @@
 				5E2DA46928686BB80055FA26 /* LaunchScreen.storyboard in Resources */,
 				5EA3E5CE2926415900C546EE /* ListStoryboard.storyboard in Resources */,
 				5E2DA46628686BB80055FA26 /* Assets.xcassets in Resources */,
+				5EA122E2292BCF5500AADFB6 /* NoteTableViewCell.xib in Resources */,
 				5E14A31529106C7B00079961 /* CommonLoginTypeView.xib in Resources */,
+				5EA122E9292C11BC00AADFB6 /* DoneTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,10 +572,12 @@
 				5EE592AF2886C229000FC2CA /* LoginInteractorProtocol.swift in Sources */,
 				5EA3E5B82925128400C546EE /* ListViewProtocol.swift in Sources */,
 				5E0C5E602868B94F00F0D1F1 /* LoginInteractor.swift in Sources */,
+				5EA122E8292C11BC00AADFB6 /* DoneTableViewCell.swift in Sources */,
 				5EA3E5BE292512EF00C546EE /* ListInteractorProtocol.swift in Sources */,
 				5EA3E5D0292645B000C546EE /* UIViewController+Extension.swift in Sources */,
 				5E0C5E5E2868B93D00F0D1F1 /* LoginViewProtocol.swift in Sources */,
 				5E0C5E642868B96A00F0D1F1 /* LoginEntity.swift in Sources */,
+				5EA122E1292BCF5500AADFB6 /* NoteTableViewCell.swift in Sources */,
 				5EA3E5CC29252DB000C546EE /* ListDataSource.swift in Sources */,
 				5EA3E5DC292652BC00C546EE /* AddNotePresenter.swift in Sources */,
 				5EA3E5E22926539300C546EE /* AddNoteRouterProtocol.swift in Sources */,
@@ -570,6 +605,7 @@
 				5EA3E5DE292652F700C546EE /* AddNoteInteractorProtocol.swift in Sources */,
 				5EA3E5C4292513E100C546EE /* ListRouterProtocol.swift in Sources */,
 				5EA3E5E62926544300C546EE /* AddNoteInitializer.swift in Sources */,
+				5EA122E4292BD20A00AADFB6 /* UITableViewCell+Extensions.swift in Sources */,
 				5E14A31329106C6B00079961 /* CommonLoginTypeView.swift in Sources */,
 				5ECACE222886EEC500A56B36 /* CommonUITextField.swift in Sources */,
 				5E0C5E622868B95A00F0D1F1 /* LoginPresenter.swift in Sources */,

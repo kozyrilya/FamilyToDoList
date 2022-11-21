@@ -41,6 +41,7 @@ class CommonUITextField: UITextField {
         self.placeholder = type.title
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.lightGray.cgColor
+        self.font = .systemFont(ofSize: 16)
 
         if type == .password {
             self.isSecureTextEntry = true

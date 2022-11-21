@@ -18,7 +18,7 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6c-kg-xCl">
                             <rect key="frame" x="0.0" y="0.0" width="195" height="59"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -30,7 +30,7 @@
                             <color key="tintColor" systemColor="labelColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Sign Up">
-                                <fontDescription key="titleFontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="17"/>
+                                <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="changeLoginTypeButtonAction:" destination="QME-Iy-xtj" eventType="touchUpInside" id="lpj-Sz-HdX"/>
